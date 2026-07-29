@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NANONI について｜NANONI</title>
+  <meta name="description" content="NANONI は少量仕込みにこだわる小さなブルワリーです。醸造所の考え方とビールのつくり方をご紹介します。">
+
+  <meta property="og:title" content="NANONI について｜NANONI">
+  <meta property="og:description" content="少量仕込みにこだわる小さなブルワリー、NANONI のご紹介。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" hidden>
+    <div class="age-gate-panel">
+      <p class="age-gate-brand">NANONI</p>
+      <h2 class="age-gate-title" id="age-gate-title">あなたは 20 歳以上ですか？</h2>
+      <p class="age-gate-note">
+        当サイトは酒類を取り扱っています。20 歳未満の方への酒類の販売はいたしません。
+      </p>
+      <div class="age-gate-actions">
+        <button class="btn btn-primary" type="button" id="age-gate-yes">はい（20 歳以上）</button>
+        <button class="btn btn-ghost" type="button" id="age-gate-no">いいえ</button>
+      </div>
+      <p class="age-gate-denied" id="age-gate-denied" hidden>
+        20 歳未満の方はご利用いただけません。ブラウザを閉じてください。
+      </p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">NANONI</span>
+        <span class="logo-sub">CRAFT BREWERY</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="products.html">商品一覧</a></li>
+          <li><a href="about.html" aria-current="page">NANONI について</a></li>
+          <li><a href="guide.html">ご利用ガイド</a></li>
+          <li><a class="btn btn-primary btn-sm" href="products.html">オンラインで購入</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <h1 class="page-title">NANONI について</h1>
+        <p class="section-lead">小さくつくって、近くに届ける。</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container prose">
+        <h2>はじまり</h2>
+        <p>
+          ここに醸造所を始めたきっかけを書きます。
+          いつ、どこで、誰が、なぜ始めたのか。読み手が最初に知りたいのはこの部分です。
+        </p>
+        <p>
+          （※ この文章はサンプルです。実際の内容に差し替えてください。）
+        </p>
+
+        <h2>つくり方</h2>
+        <p>
+          一度の仕込みは少量。麦芽とホップの配合を仕込みごとに調整し、
+          その季節にいちばん合う味を探しています。
+          仕上がったビールは醸造所の冷蔵庫で保管し、ご注文を受けてから発送します。
+        </p>
+
+        <h2>お届けについて</h2>
+        <p>
+          香りの飛びやすいビールほど、温度の管理が味を左右します。
+          NANONI では出荷までを冷蔵で通し、お届けもクール便を使っています。
+          届いたら冷蔵庫で保管し、なるべく早めにお飲みください。
+        </p>
+
+        <h2>醸造所を訪ねる</h2>
+        <p>
+          見学やタップルームの営業時間などがあれば、ここに記載します。
+          住所・アクセス・営業日を書いておくと問い合わせが減ります。
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">醸造所のデータ</h2>
+          <p class="section-lead">※ 以下はすべてサンプルです。実際の情報に差し替えてください。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="info">
+            <tbody>
+              <tr>
+                <th scope="row">名称</th>
+                <td>NANONI ブルワリー</td>
+              </tr>
+              <tr>
+                <th scope="row">所在地</th>
+                <td>〒000-0000 都道府県市区町村 0-0-0</td>
+              </tr>
+              <tr>
+                <th scope="row">設立</th>
+                <td>0000 年</td>
+              </tr>
+              <tr>
+                <th scope="row">醸造設備</th>
+                <td>仕込み容量 000L</td>
+              </tr>
+              <tr>
+                <th scope="row">見学</th>
+                <td>要予約（お問い合わせください）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">まずは一本、試してみてください</h2>
+          <p class="section-lead">定番 5 種と、飲み比べセットをご用意しています。</p>
+        </div>
+        <a class="btn btn-primary" href="products.html">商品一覧を見る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-warning">
+        <strong>20 歳未満の方の飲酒は法律で禁止されています。</strong>
+        当店では 20 歳未満の方への酒類の販売はいたしません。
+        妊娠中や授乳期の飲酒は、胎児・乳児の発育に影響するおそれがあります。
+        お酒はおいしく適量を。飲酒運転は絶対にやめましょう。
+      </div>
+
+      <div class="footer-grid">
+        <div>
+          <p class="footer-heading">NANONI</p>
+          <p style="margin:0">
+            少量仕込みのクラフトビールを<br>醸造所から直接お届けします。
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">ショップ</p>
+          <ul class="footer-list">
+            <li><a href="products.html">商品一覧</a></li>
+            <li><a href="guide.html">ご利用ガイド</a></li>
+            <li><a href="guide.html#shipping">送料・配送について</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">NANONI について</p>
+          <ul class="footer-list">
+            <li><a href="about.html">ブルワリー紹介</a></li>
+            <li><a href="guide.html#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">法令に基づく表記</p>
+          <ul class="footer-list">
+            <li><a href="legal.html">特定商取引法に基づく表記</a></li>
+            <li><a href="legal.html#privacy">プライバシーポリシー</a></li>
+            <li><a href="legal.html#license">酒類販売管理者標識</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> NANONI</p>
+        <p><a href="https://github.com/kyosuke0306/NANONI_home">GitHub</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

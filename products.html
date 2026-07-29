@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NANONI｜クラフトビールのオンラインストア</title>
-  <meta name="description" content="NANONI は少量仕込みのクラフトビールをつくり、オンラインで直接お届けするブルワリーです。">
+  <title>商品一覧｜NANONI</title>
+  <meta name="description" content="NANONI が醸造するクラフトビールの一覧です。単品と飲み比べセットをご用意しています。">
 
-  <meta property="og:title" content="NANONI｜クラフトビールのオンラインストア">
-  <meta property="og:description" content="少量仕込みのクラフトビールを、醸造所から直接お届けします。">
+  <meta property="og:title" content="商品一覧｜NANONI">
+  <meta property="og:description" content="NANONI が醸造するクラフトビールの一覧です。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
 
@@ -17,7 +17,6 @@
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
 
-  <!-- 年齢確認（JavaScript で表示します） -->
   <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" hidden>
     <div class="age-gate-panel">
       <p class="age-gate-brand">NANONI</p>
@@ -50,87 +49,29 @@
 
       <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
         <ul>
-          <li><a href="index.html" aria-current="page">ホーム</a></li>
-          <li><a href="products.html">商品一覧</a></li>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="products.html" aria-current="page">商品一覧</a></li>
           <li><a href="about.html">NANONI について</a></li>
           <li><a href="guide.html">ご利用ガイド</a></li>
-          <li><a class="btn btn-primary btn-sm" href="products.html">オンラインで購入</a></li>
+          <li><a class="btn btn-primary btn-sm" href="#lineup">オンラインで購入</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <p class="hero-eyebrow">Craft Beer, Delivered</p>
-          <h1 class="hero-title">できたてのクラフトビールを、<br>醸造所から直接。</h1>
-          <p class="hero-lead">
-            NANONI は少量仕込みにこだわる小さなブルワリーです。
-            仕込みごとに違う表情のビールを、いちばんおいしい状態で冷蔵便でお届けします。
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="products.html">商品を見る</a>
-            <a class="btn btn-ghost" href="about.html">NANONI について</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="can" style="--can-color:#d9a441"></div>
-          <div class="can can-lg" style="--can-color:#b4661e"></div>
-          <div class="can" style="--can-color:#6d4526"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <div class="page-head">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">NANONI の 3 つの約束</h2>
-          <p class="section-lead">
-            つくり方から届け方まで、おいしさが落ちないところを選んでいます。
-          </p>
-        </div>
-
-        <ul class="card-grid">
-          <li class="card">
-            <span class="card-num">01</span>
-            <h3 class="card-title">少量仕込み</h3>
-            <p class="card-body">
-              一度に仕込む量を抑え、麦芽とホップの配合を毎回調整しています。
-              季節ごとに変わる香りをそのまま瓶に詰めています。
-            </p>
-          </li>
-          <li class="card">
-            <span class="card-num">02</span>
-            <h3 class="card-title">出荷まで冷蔵</h3>
-            <p class="card-body">
-              醸造所の冷蔵庫から冷蔵便まで、温度を上げずにお届けします。
-              ホップの香りが飛びやすいビールほど、この差が出ます。
-            </p>
-          </li>
-          <li class="card">
-            <span class="card-num">03</span>
-            <h3 class="card-title">つくり手から直接</h3>
-            <p class="card-body">
-              オンラインストアはつくり手が直接運営しています。
-              味の疑問にも、醸造した本人がお答えします。
-            </p>
-          </li>
-        </ul>
+        <h1 class="page-title">商品一覧</h1>
+        <p class="section-lead">
+          仕込みごとに数量が限られています。売り切れの際はご容赦ください。
+          表示価格はすべて税込です。
+        </p>
       </div>
-    </section>
+    </div>
 
-    <section class="section section-alt">
+    <section class="section" id="lineup">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">定番のビール</h2>
-          <p class="section-lead">
-            まず飲んでいただきたい 3 本です。すべての商品は
-            <a href="products.html">商品一覧</a>からご覧いただけます。
-          </p>
-        </div>
-
         <ul class="product-grid">
           <li class="product">
             <div class="product-thumb">
@@ -138,17 +79,19 @@
             </div>
             <div class="product-body">
               <p class="product-style">Pale Ale</p>
-              <h3 class="product-name">NANONI ペールエール</h3>
+              <h2 class="product-name">NANONI ペールエール</h2>
               <p class="product-desc">
-                柑橘を思わせる香りと、すっきりした苦み。最初の一本におすすめです。
+                柑橘を思わせる香りと、すっきりした苦み。
+                料理を選ばず、最初の一本におすすめです。
               </p>
               <ul class="product-spec">
                 <li>Alc. 5.0%</li>
+                <li>IBU 32</li>
                 <li>350ml</li>
               </ul>
               <div class="product-foot">
                 <p class="product-price">¥680 <small>税込</small></p>
-                <a class="btn btn-primary btn-sm" href="products.html">詳しく見る</a>
+                <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
               </div>
             </div>
           </li>
@@ -159,17 +102,19 @@
             </div>
             <div class="product-body">
               <p class="product-style">India Pale Ale</p>
-              <h3 class="product-name">NANONI IPA</h3>
+              <h2 class="product-name">NANONI IPA</h2>
               <p class="product-desc">
-                ホップをたっぷり使った、香りの強い一本。しっかりした苦みが好きな方へ。
+                ホップをたっぷり使った、香りの強い一本。
+                しっかりした苦みと余韻が好きな方へ。
               </p>
               <ul class="product-spec">
                 <li>Alc. 6.5%</li>
+                <li>IBU 58</li>
                 <li>350ml</li>
               </ul>
               <div class="product-foot">
                 <p class="product-price">¥780 <small>税込</small></p>
-                <a class="btn btn-primary btn-sm" href="products.html">詳しく見る</a>
+                <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
               </div>
             </div>
           </li>
@@ -180,17 +125,92 @@
             </div>
             <div class="product-body">
               <p class="product-style">Belgian White</p>
-              <h3 class="product-name">NANONI ホワイト</h3>
+              <h2 class="product-name">NANONI ホワイト</h2>
               <p class="product-desc">
                 オレンジピールとコリアンダーを効かせた、やわらかい口当たり。
+                苦みが苦手な方にも。
               </p>
               <ul class="product-spec">
                 <li>Alc. 4.8%</li>
+                <li>IBU 14</li>
                 <li>350ml</li>
               </ul>
               <div class="product-foot">
                 <p class="product-price">¥720 <small>税込</small></p>
-                <a class="btn btn-primary btn-sm" href="products.html">詳しく見る</a>
+                <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="product-thumb">
+              <div class="can can-lg" style="--can-color:#3b2417" aria-hidden="true"></div>
+            </div>
+            <div class="product-body">
+              <p class="product-style">Stout</p>
+              <h2 class="product-name">NANONI スタウト</h2>
+              <p class="product-desc">
+                ローストした麦芽の香ばしさと、コーヒーのような余韻。
+                冬にゆっくり飲みたい一本です。
+              </p>
+              <ul class="product-spec">
+                <li>Alc. 7.0%</li>
+                <li>IBU 40</li>
+                <li>350ml</li>
+              </ul>
+              <div class="product-foot">
+                <p class="product-price">¥860 <small>税込</small></p>
+                <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="product-thumb">
+              <div class="can can-lg" style="--can-color:#c8a03a" aria-hidden="true"></div>
+            </div>
+            <div class="product-body">
+              <p class="product-style">Saison</p>
+              <h2 class="product-name">NANONI セゾン</h2>
+              <p class="product-desc">
+                酵母由来のスパイシーな香りと、乾いた後味。
+                食事に合わせやすい季節のビールです。
+              </p>
+              <ul class="product-spec">
+                <li>Alc. 5.5%</li>
+                <li>IBU 25</li>
+                <li>350ml</li>
+              </ul>
+              <div class="product-foot">
+                <p class="product-price">¥800 <small>税込</small></p>
+                <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="product-thumb">
+              <div class="can-pair" aria-hidden="true">
+                <div class="can" style="--can-color:#d9a441"></div>
+                <div class="can" style="--can-color:#b4661e"></div>
+                <div class="can" style="--can-color:#3b2417"></div>
+              </div>
+            </div>
+            <div class="product-body">
+              <p class="product-style">Assort Set</p>
+              <h2 class="product-name">飲み比べ 6 本セット</h2>
+              <p class="product-desc">
+                定番 5 種にその時期の限定醸造を 1 本加えた、
+                贈り物にも使えるアソートです。
+              </p>
+              <ul class="product-spec">
+                <li>350ml × 6</li>
+                <li>化粧箱入り</li>
+                <li>送料無料</li>
+              </ul>
+              <div class="product-foot">
+                <p class="product-price">¥4,500 <small>税込</small></p>
+                <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
               </div>
             </div>
           </li>
@@ -198,50 +218,22 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt" id="purchase">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title">ご注文について</h2>
+          <h2 class="section-title">ご購入手続きについて</h2>
         </div>
-
-        <div class="table-wrap">
-          <table class="info">
-            <tbody>
-              <tr>
-                <th scope="row">配送方法</th>
-                <td>クール便（冷蔵）でお届けします。</td>
-              </tr>
-              <tr>
-                <th scope="row">送料</th>
-                <td>全国一律 ¥1,100（クール便料金を含む）／ ¥10,000 以上のご注文で送料無料</td>
-              </tr>
-              <tr>
-                <th scope="row">発送までの日数</th>
-                <td>ご入金確認後 3 営業日以内に発送します。</td>
-              </tr>
-              <tr>
-                <th scope="row">お支払い方法</th>
-                <td>クレジットカード、銀行振込、代金引換</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p style="margin-top:1.5rem">
-          くわしくは<a href="guide.html">ご利用ガイド</a>をご覧ください。
-        </p>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">今日のビールを選ぶ</h2>
-          <p class="section-lead">
-            単品でも、飲み比べセットでも。冷蔵便で醸造所からお届けします。
+        <div class="notice">
+          <p>
+            <strong>このページはまだ注文を受け付けられません。</strong>
+            現在はカート・決済機能が未接続の状態です。
+          </p>
+          <p>
+            オンラインでの販売を開始するには、決済サービス（Shopify、BASE、STORES など）との接続、
+            または独自のカート機能の実装が必要です。あわせて、酒類の通信販売には
+            <a href="legal.html#license">通信販売酒類小売業免許</a>が必要です。
           </p>
         </div>
-        <a class="btn btn-primary" href="products.html">商品一覧を見る</a>
       </div>
     </section>
   </main>

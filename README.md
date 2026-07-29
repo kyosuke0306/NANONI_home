@@ -1,24 +1,46 @@
 # NANONI_home
 
-NANONI の静的サイト（HTML / CSS / JavaScript）です。ビルドツールや外部ライブラリは使っていません。
+クラフトビール EC サイト「NANONI」の静的サイト（HTML / CSS / JavaScript）です。ビルドツールや外部ライブラリは使っていません。
 
 公開先: https://kyosuke0306.github.io/NANONI_home/
+
+## ⚠️ 販売開始前に必ず対応すること
+
+このサイトは**まだ注文を受け付けられません**。また、**掲載されている事業者情報・価格・免許番号などはすべて記入例**です。
+
+1. **カート / 決済の接続** — 静的サイト単体では決済も在庫管理もできません。Shopify・BASE・STORES などの外部サービスに接続するか、独自にバックエンドを実装する必要があります。
+2. **通信販売酒類小売業免許の取得** — 酒類をインターネットで販売するには所轄税務署の免許が必要です。一般の酒類小売業免許とは別のものです。
+3. **`legal.html` の記入** — 特定商取引法に基づく表記、酒類販売管理者標識、プライバシーポリシーの内容を実際の情報に差し替えてください。
+4. **商品情報の差し替え** — `products.html` の商品名・価格・アルコール度数・原材料などを実際のものに。
+5. **`about.html` / `guide.html` の記入** — 醸造所情報、送料、返品条件などを実際の運用に合わせてください。
+
+法令上の要件があるため、公開前に専門家の確認を受けることをおすすめします。
 
 ## ディレクトリ構成
 
 ```
 .
-├── index.html              # トップページ
+├── index.html              トップページ
+├── products.html           商品一覧
+├── about.html              ブルワリー紹介
+├── guide.html              ご利用ガイド（送料・支払い・FAQ・問い合わせ）
+├── legal.html              特商法表記 / 酒類販売管理者標識 / プライバシーポリシー
 ├── assets/
-│   ├── css/style.css       # スタイル（配色はカスタムプロパティで一括変更可能）
-│   └── js/main.js          # ナビゲーション開閉・年号の自動更新
+│   ├── css/style.css       スタイル（配色はカスタムプロパティで一括変更）
+│   └── js/main.js          ナビ開閉・年齢確認モーダル・年号の自動更新
 └── .github/workflows/
-    └── deploy.yml          # main への push で GitHub Pages へ自動デプロイ
+    └── deploy.yml          main への push で GitHub Pages へ自動デプロイ
 ```
 
-## ローカルで確認する
+## 年齢確認について
 
-`index.html` をブラウザで直接開くだけでも表示できます。ローカルサーバー経由で見たい場合は次のいずれかを実行してください。
+酒類を扱うため、初回アクセス時に 20 歳以上かを確認するモーダルを表示します（`assets/js/main.js`）。
+
+- 「はい」を選ぶと `localStorage` に記録し、同じブラウザでは再表示しません
+- JavaScript が無効な環境ではモーダルが表示されません（コンテンツは閲覧できます）
+- **これは自己申告による簡易確認です。** 実効性のある年齢確認は、決済プラットフォーム側の仕組みと、配達時の身分証確認で担保してください
+
+## ローカルで確認する
 
 ```bash
 python3 -m http.server 8000
@@ -26,25 +48,24 @@ python3 -m http.server 8000
 npx serve .
 ```
 
-http://localhost:8000 を開きます。
+http://localhost:8000 を開きます。年齢確認モーダルを再表示したい場合は、開発者ツールで `localStorage.removeItem('nanoni:age-verified')` を実行してください。
 
 ## 公開の仕組み
 
-`main` ブランチへ push すると GitHub Actions が走り、リポジトリの内容がそのまま GitHub Pages へデプロイされます。手動で実行したい場合は Actions タブから **Deploy to GitHub Pages** を選び、Run workflow を押してください。
+`main` ブランチへ push すると GitHub Actions が走り、リポジトリの内容がそのまま GitHub Pages へデプロイされます。手動実行は Actions タブの **Deploy to GitHub Pages** → Run workflow から行えます。
 
-### 初回のみ必要な設定
-
-リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に変更してください。ここが `Deploy from a branch` のままだとワークフローが失敗します。
+リポジトリの Settings → Pages → Source は **GitHub Actions** に設定済みです。
 
 ## 編集のしかた
 
-- **文章を変える**: `index.html` の各セクション（`#top` / `#about` / `#features` / `#contact`）を書き換えます。
-- **配色を変える**: `assets/css/style.css` 冒頭の `:root` にある `--accent` などを変更します。ダークモード用の値は同ファイルの `@media (prefers-color-scheme: dark)` 内にあります。
-- **項目を増やす**: Features セクションの `.card` を複製すると、グリッドが自動で折り返します。
-- **連絡先を変える**: Contact セクションの `mailto:` を実際のアドレスに置き換えます。
+- **配色を変える**: `assets/css/style.css` 冒頭の `:root` にある `--accent` などを変更します。ダークモード用の値は `@media (prefers-color-scheme: dark)` 内にあります。
+- **商品を増やす**: `products.html` の `<li class="product">` を複製します。グリッドは自動で折り返します。
+- **商品画像**: 現在は CSS で描いた缶のプレースホルダー（`.can`）を使っています。写真を用意したら `<div class="can">` を `<img>` に置き換えてください。`--can-color` で色を変えられます。
+- **ヘッダー / フッター**: 各 HTML ファイルに直接書かれています。共通部分を変更する際は全ページの修正が必要です。ページ数が増えるようなら静的サイトジェネレーターの導入を検討してください。
 
 ## 対応状況
 
-- レスポンシブ（スマートフォン幅でハンバーガーメニューに切り替わります）
+- レスポンシブ（52rem 未満でハンバーガーメニューに切り替わります）
 - ライト / ダークモードの自動切り替え
-- キーボード操作とスクリーンリーダー向けの基本対応（スキップリンク、`aria-expanded` など）
+- キーボード操作とスクリーンリーダー向けの基本対応（スキップリンク、`aria-expanded`、モーダルのフォーカストラップ、Esc での閉じる操作）
+- `prefers-reduced-motion` への対応
