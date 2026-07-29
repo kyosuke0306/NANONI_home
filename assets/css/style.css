@@ -617,10 +617,20 @@ rt {
 
 .illust {
   display: block;
-  width: min(100%, 26rem);
+  width: min(100%, 15rem);
   height: auto;
   margin-inline: auto;
   color: var(--fg-muted);
+}
+
+/* 見出しに小さく添えるモチーフ */
+.illust-mark {
+  display: block;
+  width: 3.75rem;
+  height: auto;
+  margin: 2.75rem auto 1.75rem;
+  color: var(--fg-muted);
+  opacity: 0.75;
 }
 
 .illust-wrap {
@@ -629,13 +639,7 @@ rt {
   justify-content: center;
 }
 
-.figure-center {
-  margin: 2.5rem 0;
-  text-align: center;
-}
 
-/* 単体のモチーフは小さめに置く */
-.illust-sm { width: min(100%, 11rem); }
 
 .card-title { margin: 0 0 0.6rem; font-size: 1.05rem; }
 .card-body { margin: 0; color: var(--fg-muted); font-size: 0.92rem; }
