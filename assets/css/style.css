@@ -403,11 +403,10 @@ rt {
   gap: 1rem;
 }
 
+/* 缶は背景を抜いた PNG。角丸や影を付けると板のように浮くので付けない */
 .hero-visual img {
-  width: min(100%, 22rem);
+  width: min(100%, 20rem);
   height: auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
 }
 
 /* 商品画像が用意できるまでの CSS 製プレースホルダー（缶のシルエット） */
@@ -503,13 +502,12 @@ rt {
   border-bottom: 1px solid var(--border);
 }
 
-/* 商品写真は余白を持たせず、カード幅いっぱいに見せる */
-.product-thumb-photo { padding: 0; }
+/* 切り抜いた缶を、サムネイルの中央に置く */
+.product-thumb-photo { padding: 1.5rem 1rem; }
 .product-thumb-photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
+  width: auto;
+  max-height: 15rem;
+  margin-inline: auto;
 }
 
 .product-body {
