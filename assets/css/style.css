@@ -377,6 +377,14 @@ a { color: var(--accent); }
   font-weight: 400;
 }
 
+/* 「無花果」の読み。本文を邪魔しない大きさに抑える */
+rt {
+  font-size: 0.4em;
+  font-weight: 400;
+  color: var(--fg-muted);
+  ruby-align: center;
+}
+
 .hero-lead {
   margin: 0 0 2rem;
   max-width: 32rem;
