@@ -638,6 +638,8 @@ rt {
   color: var(--fg-muted);
 }
 
+.timeline-figure { margin-top: 1.25rem; }
+
 /* --- 汎用カード --------------------------------------------------------- */
 
 .card-grid {
