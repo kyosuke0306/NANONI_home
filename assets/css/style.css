@@ -329,6 +329,13 @@ a { color: var(--accent); }
   gap: 1rem;
 }
 
+.hero-visual img {
+  width: min(100%, 22rem);
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 /* 商品画像が用意できるまでの CSS 製プレースホルダー（缶のシルエット） */
 .can {
   width: clamp(3.5rem, 9vw, 5rem);
@@ -420,6 +427,15 @@ a { color: var(--accent); }
   padding: 2rem 1rem;
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
+}
+
+/* 商品写真は余白を持たせず、カード幅いっぱいに見せる */
+.product-thumb-photo { padding: 0; }
+.product-thumb-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
 }
 
 .product-body {

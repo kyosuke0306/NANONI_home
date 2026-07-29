@@ -74,19 +74,19 @@
       <div class="container">
         <ul class="product-grid">
           <li class="product">
-            <div class="product-thumb">
-              <div class="can can-lg" style="--can-color:#e8d9a8" aria-hidden="true"></div>
+            <div class="product-thumb product-thumb-photo">
+              <img src="assets/img/nanoni-white.jpg" width="900" height="1350"
+                   alt="NANONI -white- の缶。白いラベルに黒い有機的な形と NANONI のロゴ。">
             </div>
             <div class="product-body">
-              <p class="product-style">White Ale</p>
+              <p class="product-style">White Fig</p>
               <h2 class="product-name">NANONI -white-</h2>
               <p class="product-desc">
                 ここに味わいの説明を入れます。香り、口当たり、合わせたい料理などを
                 2〜3 行で書くと選びやすくなります。
               </p>
               <ul class="product-spec">
-                <li>Alc. 0.0%</li>
-                <li>IBU 00</li>
+                <li>Alc. 5%</li>
                 <li>000ml</li>
               </ul>
               <div class="product-foot">
@@ -97,12 +97,18 @@
           </li>
 
           <!-- 商品を追加するときは、下のブロックをコピーしてこのコメントの下に貼り、
-               缶の色（--can-color）、スタイル、商品名、説明、スペック、価格を書き換えてください。
+               スタイル、商品名、説明、スペック、価格を書き換えてください。
                カードは自動で折り返すので、CSS の変更は不要です。
 
+               写真は assets/img/ に置き、src と alt を差し替えます。
+               まだ写真が無い場合は <div class="product-thumb"> に戻したうえで、
+               <img> の代わりに次の 1 行を入れると缶の絵が仮表示されます。
+                 <div class="can can-lg" style="--can-color:#d9a441" aria-hidden="true"></div>
+
           <li class="product">
-            <div class="product-thumb">
-              <div class="can can-lg" style="--can-color:#d9a441" aria-hidden="true"></div>
+            <div class="product-thumb product-thumb-photo">
+              <img src="assets/img/商品名.jpg" width="900" height="1350"
+                   alt="商品の缶の写真。ラベルの見た目を説明する文。">
             </div>
             <div class="product-body">
               <p class="product-style">スタイル名（英語）</p>
@@ -110,7 +116,6 @@
               <p class="product-desc">説明</p>
               <ul class="product-spec">
                 <li>Alc. 0.0%</li>
-                <li>IBU 00</li>
                 <li>000ml</li>
               </ul>
               <div class="product-foot">
