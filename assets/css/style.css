@@ -358,20 +358,6 @@ a { color: var(--accent); }
 
 .can-lg { width: clamp(4.5rem, 12vw, 6.5rem); }
 
-/* セット商品用に缶を横並びで見せる。
-   単品カードのサムネイルと高さを揃えるため、.can-lg と同じ高さを指定する。 */
-.can-pair {
-  display: flex;
-  align-items: stretch;
-  gap: 0.5rem;
-  height: calc(clamp(4.5rem, 12vw, 6.5rem) * 2.4);
-}
-.can-pair .can {
-  width: clamp(2.2rem, 5.5vw, 3rem);
-  height: 100%;
-  aspect-ratio: auto;
-}
-
 /* --- セクション --------------------------------------------------------- */
 
 .section { padding: clamp(3.5rem, 8vw, 5.5rem) 0; }
@@ -407,9 +393,12 @@ a { color: var(--accent); }
 
 /* --- 商品グリッド ------------------------------------------------------- */
 
+/* 商品が 1 点でも極端に細長くならないよう、トラックの上限を決めて中央寄せにする。
+   商品が増えれば同じ指定のまま自動で折り返す。 */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+  justify-content: center;
   gap: 1.5rem;
   list-style: none;
   margin: 0;
