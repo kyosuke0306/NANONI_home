@@ -300,6 +300,35 @@ a { color: var(--accent); }
 .btn-ghost:hover { background: var(--bg-alt); }
 
 .btn-sm { padding: 0.5rem 1.1rem; font-size: 0.85rem; }
+
+/* ボタン内のアイコン。文字サイズに追従させる */
+.btn svg {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.18em;
+  margin-right: 0.45rem;
+}
+
+/* アイコンだけのリンク。SVG は currentColor なので配色に自動で追従する */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.icon-link:hover {
+  color: var(--fg);
+  border-color: var(--fg-muted);
+}
+
+.icon-link svg { width: 1.15rem; height: 1.15rem; }
 .btn-block { display: block; width: 100%; text-align: center; }
 
 /* --- ヒーロー ----------------------------------------------------------- */

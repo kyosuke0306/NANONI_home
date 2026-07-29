@@ -81,7 +81,9 @@ http://localhost:8000 を開きます。年齢確認モーダルをすぐ再表�
 
 ## 外部リンク
 
-Instagram（https://www.instagram.com/nanoni_kanie ）をフッター・お問い合わせ・ブランド情報表の 3 か所に置いています。全ページのフッターに入っているため、アカウントが変わったときは 5 ファイルすべてを直す必要があります。
+Instagram（https://www.instagram.com/nanoni_kanie ）を、全ページのフッター下部（アイコン）、`guide.html` のお問い合わせ（アイコン付きボタン）、`about.html` のブランド情報表（テキスト）に置いています。
+
+アイコンは SVG を HTML に直接書いています。`fill="currentColor"` なので配色に自動で追従し、ダークモードでも反転処理は不要です。円形の枠は `.icon-link`、ボタン内のサイズ調整は `.btn svg` です。アカウントが変わったときは 5 ファイルすべてを直す必要があります。
 
 ## 対応状況
 
