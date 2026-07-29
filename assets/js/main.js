@@ -42,7 +42,12 @@
 
   /* ---- 年齢確認 ------------------------------------------------------
      酒類を扱うため、20歳未満の閲覧・購入をお断りする確認を表示します。
-     一度「はい」を選ぶと、同じブラウザでは再表示しません。
+
+     記録先は sessionStorage です。同じタブで見て回る間は再表示しませんが、
+     タブやブラウザを閉じると記録が消え、次に訪れたときはまた確認します。
+     ずっと記憶させたい場合は、下の sessionStorage を localStorage に
+     書き換えてください（その場合、一度「はい」を押すと再表示されません）。
+
      注意: これは自己申告による簡易確認です。実際の年齢確認は、決済・配送を
      担当するプラットフォーム側および配達時の身分証確認で行ってください。
   -------------------------------------------------------------------- */
@@ -52,15 +57,18 @@
 
   var STORAGE_KEY = 'nanoni:age-verified';
 
-  // localStorage はプライベートモード等で例外を投げることがあるため保護する
+  // sessionStorage はプライベートモード等で例外を投げることがあるため保護する
   var store = {
     get: function (key) {
-      try { return window.localStorage.getItem(key); } catch (e) { return null; }
+      try { return window.sessionStorage.getItem(key); } catch (e) { return null; }
     },
     set: function (key, value) {
-      try { window.localStorage.setItem(key, value); } catch (e) { /* 保存できなくても続行 */ }
+      try { window.sessionStorage.setItem(key, value); } catch (e) { /* 保存できなくても続行 */ }
     }
   };
+
+  // 以前の版で localStorage に残った記録を消しておく（残っていると再表示されない）
+  try { window.localStorage.removeItem(STORAGE_KEY); } catch (e) { /* 失敗しても続行 */ }
 
   if (store.get(STORAGE_KEY) === 'yes') {
     return;
