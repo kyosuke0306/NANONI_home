@@ -633,6 +633,9 @@ rt {
   opacity: 0.75;
 }
 
+/* 見出しと同じ左端にそろえたい場合 */
+.illust-mark-start { margin-inline: 0; }
+
 .illust-wrap {
   display: flex;
   align-items: center;
