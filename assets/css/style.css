@@ -606,6 +606,29 @@ rt {
   letter-spacing: 0.16em;
 }
 
+/* 線画イラスト。currentColor なので配色に追従する */
+.card-icon {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--fg-muted);
+}
+
+.illust {
+  display: block;
+  width: min(100%, 26rem);
+  height: auto;
+  margin-inline: auto;
+  color: var(--fg-muted);
+}
+
+.illust-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-title { margin: 0 0 0.6rem; font-size: 1.05rem; }
 .card-body { margin: 0; color: var(--fg-muted); font-size: 0.92rem; }
 
