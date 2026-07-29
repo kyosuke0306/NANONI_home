@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -19,6 +19,7 @@
 
   <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" hidden>
     <div class="age-gate-panel">
+      <img class="brand-mark age-gate-mark" src="assets/img/brand-mark.svg" alt="" width="812" height="788">
       <p class="age-gate-brand">NANONI</p>
       <h2 class="age-gate-title" id="age-gate-title">あなたは 20 歳以上ですか？</h2>
       <p class="age-gate-note">
@@ -37,8 +38,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
-        <span class="logo-mark">NANONI</span>
-        <span class="logo-sub">CRAFT BREWERY</span>
+        <img class="brand-mark logo-icon" src="assets/img/brand-mark.svg" alt="" width="812" height="788">
+        <span class="logo-text">
+          <span class="logo-name">NANONI</span>
+          <span class="logo-sub">CRAFT BREWERY</span>
+        </span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
@@ -90,7 +94,7 @@
                 <li>000ml</li>
               </ul>
               <div class="product-foot">
-                <p class="product-price">¥0,000 <small>税込</small></p>
+                <p class="product-price">¥1,000 <small>税込</small></p>
                 <a class="btn btn-primary btn-sm" href="#purchase">カートに入れる</a>
               </div>
             </div>
@@ -161,6 +165,7 @@
 
       <div class="footer-grid">
         <div>
+          <img class="brand-mark footer-mark" src="assets/img/brand-mark.svg" alt="" width="812" height="788">
           <p class="footer-heading">NANONI</p>
           <p style="margin:0">
             少量仕込みのクラフトビールを<br>醸造所から直接お届けします。

@@ -113,6 +113,13 @@ a { color: var(--accent); }
   text-align: center;
 }
 
+.age-gate-mark {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 0.9rem;
+  object-fit: contain;
+}
+
 .age-gate-brand {
   margin: 0 0 1rem;
   font-size: 1.35rem;
@@ -165,14 +172,36 @@ a { color: var(--accent); }
   min-height: 4.25rem;
 }
 
+/* ブランドマーク。SVG は黒一色なので、暗い配色では反転させて明色にする。
+   大きさは使う場所ごとに指定するため、ここでは寸法を持たせない。 */
+.brand-mark { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  .brand-mark { filter: invert(1); }
+}
+
 .logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
   line-height: 1.2;
   text-decoration: none;
   color: var(--fg);
 }
-.logo-mark {
+
+.logo-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  flex: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -606,6 +635,14 @@ table.info th {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 2rem;
   margin-bottom: 2.5rem;
+}
+
+.footer-mark {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+  opacity: 0.85;
 }
 
 .footer-heading {
