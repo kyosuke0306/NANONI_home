@@ -342,6 +342,12 @@ a { color: var(--accent); }
   text-wrap: balance;
 }
 
+/* ブランド名の由来「なのに」を、前後の語より一段引いて見せる */
+.hero-accent {
+  color: var(--fg-muted);
+  font-weight: 400;
+}
+
 .hero-lead {
   margin: 0 0 2rem;
   max-width: 32rem;
@@ -607,6 +613,15 @@ table.info th {
 .notice p + p { margin-top: 0.6rem; }
 
 .prose { max-width: 44rem; }
+
+/* 缶に書かれた「なのに」の 3 行。本文より大きく、独立した塊として見せる */
+.nanoni-lines {
+  margin: 0 0 1.75rem;
+  color: var(--fg);
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 700;
+  line-height: 2;
+}
 .prose h2 { margin: 2.5rem 0 0.75rem; font-size: 1.25rem; }
 .prose h2:first-child { margin-top: 0; }
 .prose p { margin: 0 0 1rem; color: var(--fg-muted); }
