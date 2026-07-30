@@ -834,6 +834,24 @@ figcaption {
   margin: 0 auto 2rem;
 }
 
+/* 蟹江町の位置を示す概略図。写真ではないので枠も影も付けない */
+.map-figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.map {
+  display: block;
+  width: min(100%, 26rem);
+  height: auto;
+  margin-inline: auto;
+  color: var(--fg-muted);
+}
+
+/* 地名は本文と同じ濃さで。線の上に重なっても読めるよう、
+   文字の周りを背景色で縁取りしている（SVG 側の paint-order="stroke"）*/
+.map text { fill: var(--fg); }
+
 .prose { max-width: 44rem; }
 
 /* 缶に書かれた「なのに」の 3 行。本文より大きく、独立した塊として見せる */
