@@ -403,18 +403,25 @@ rt {
   gap: 1rem;
 }
 
-/* 缶は背景を抜いた PNG。枠や角丸を付けると板のように浮くので付けない。
-   代わりに輪郭に沿う drop-shadow で接地させる。影が無いと缶の底（ほぼ白）が
-   背景に溶けて、下が見切れているように見える。 */
-.hero-visual img {
+/* 缶は背景を抜いた画像。枠や角丸を付けると板のように浮くので付けず、
+   輪郭に沿う drop-shadow だけで接地させる。
+   幅は <picture> に指定すること。<picture> は inline なので、中の <img> に
+   パーセント幅を書くと基準となる幅が決まらず、中央寄せも効かなくなる。 */
+.hero-visual picture {
+  display: block;
   width: min(100%, 17rem);
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
   height: auto;
   filter: drop-shadow(0 0.7rem 0.9rem rgba(0, 0, 0, 0.16));
 }
 
 /* スマホでは 1 カラムになり缶が主役になりすぎるので、ひとまわり小さくする */
 @media (max-width: 62rem) {
-  .hero-visual img { width: min(52%, 11rem); }
+  .hero-visual picture { width: min(52%, 11rem); }
 }
 
 /* 商品画像が用意できるまでの CSS 製プレースホルダー（缶のシルエット） */
@@ -511,11 +518,16 @@ rt {
 }
 
 /* 切り抜いた缶を、サムネイルの中央に置く */
-.product-thumb-photo { padding: 1.5rem 1rem; }
+.product-thumb-photo {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+.product-thumb-photo picture { display: block; }
 .product-thumb-photo img {
+  display: block;
   width: auto;
   max-height: 15rem;
-  margin-inline: auto;
   filter: drop-shadow(0 0.5rem 0.7rem rgba(0, 0, 0, 0.14));
 }
 
