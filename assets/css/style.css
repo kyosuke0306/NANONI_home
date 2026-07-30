@@ -403,10 +403,18 @@ rt {
   gap: 1rem;
 }
 
-/* 缶は背景を抜いた PNG。角丸や影を付けると板のように浮くので付けない */
+/* 缶は背景を抜いた PNG。枠や角丸を付けると板のように浮くので付けない。
+   代わりに輪郭に沿う drop-shadow で接地させる。影が無いと缶の底（ほぼ白）が
+   背景に溶けて、下が見切れているように見える。 */
 .hero-visual img {
-  width: min(100%, 20rem);
+  width: min(100%, 17rem);
   height: auto;
+  filter: drop-shadow(0 0.7rem 0.9rem rgba(0, 0, 0, 0.16));
+}
+
+/* スマホでは 1 カラムになり缶が主役になりすぎるので、ひとまわり小さくする */
+@media (max-width: 62rem) {
+  .hero-visual img { width: min(52%, 11rem); }
 }
 
 /* 商品画像が用意できるまでの CSS 製プレースホルダー（缶のシルエット） */
@@ -508,6 +516,7 @@ rt {
   width: auto;
   max-height: 15rem;
   margin-inline: auto;
+  filter: drop-shadow(0 0.5rem 0.7rem rgba(0, 0, 0, 0.14));
 }
 
 .product-body {
