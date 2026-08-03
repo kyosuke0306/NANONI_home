@@ -1,0 +1,25 @@
+{
+  "name": "NANONI",
+  "short_name": "NANONI",
+  "description": "愛知県蟹江町の 24CLUB が企画するクラフト発泡酒ブランド NANONI のオンラインストアです。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
