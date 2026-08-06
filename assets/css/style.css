@@ -864,6 +864,7 @@ figcaption {
 }
 .prose h2 { margin: 2.5rem 0 0.75rem; font-size: 1.25rem; }
 .prose h2:first-child { margin-top: 0; }
+.prose h3 { margin: 1.75rem 0 0.5rem; font-size: 1.02rem; }
 .prose p { margin: 0 0 1rem; color: var(--fg-muted); }
 .prose ul { margin: 0 0 1rem; padding-left: 1.25rem; color: var(--fg-muted); }
 .prose li { margin-bottom: 0.35rem; }
